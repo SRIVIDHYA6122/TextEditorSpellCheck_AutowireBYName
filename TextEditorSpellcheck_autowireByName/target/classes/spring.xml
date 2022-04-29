@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd"> 
+    <!-- create an object -->
+   <!--   <bean id="spellcheck" class="com.edu.SpellCheck"></bean> -->
+   
+  <!--<bean id="texteditorob" class="com.edu.TextEditor" autowire="byName"></bean>  -->  
+   <!--   <bean id="texteditorob" class="com.edu.TextEditor" autowire="byType"></bean> -->
+ <!--   <bean  id ="texteditorob" class="com.edu.TextEditor" autowire="constructor"></bean>  -->
+
+ <bean id="spellcheckob" class="com.edu.SpellCheck"></bean>
+ <bean id="texteditorob" class="com.edu.TextEditor">
+ <property name="spellcheck" ref="spellcheckob"></property>
+ </bean>
+    </beans>
